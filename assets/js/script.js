@@ -11,16 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
   function updateBanner() {
       banner.innerHTML = ""; // Clear existing elements
 
-      let count;
-      if (window.innerWidth > 1200) {
-          count = 4; // Large screens
-      } else if (window.innerWidth > 900) {
-          count = 3; // Medium screens
-      } else if (window.innerWidth > 600) {
-          count = 2; // Small screens
-      } else {
-          count = 1; // Extra small screens
-      }
+      // Estimate the width of one phrase. Adjust this value if the font or spacing changes.
+      const phraseWidth = 400; // Approximate width in pixels
+      let count = Math.ceil(window.innerWidth / phraseWidth) + 2; // Calculate how many fit and add a buffer
 
       for (let i = 0; i < count; i++) {
           const span = document.createElement("span");

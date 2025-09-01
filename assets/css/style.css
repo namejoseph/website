@@ -35,7 +35,7 @@ header {
 }
 
 .left-column {
-  background: url('img/js-website-home-slider-minimoog.jpg');
+  background: url('../images/js-website-home-slider-minimoog.jpg');
   background-position: top;
   background-size: cover;
   position: relative;
@@ -271,6 +271,7 @@ button:hover {
   padding-left: 8px;
   padding-right: 8px;
   width: 100%;
+  height: 100%;
 }
 
 .media-triptych-child {
@@ -298,6 +299,7 @@ button:hover {
 
 .media-triptych-child-main {
   padding: 20px;
+  position: relative;
   /* Adjust padding as needed */
 }
 
@@ -394,32 +396,32 @@ button:hover {
 }
 
 .item1 {
-  background-image: url('img/js-website-home-temp2.jpg');
+  background-image: url('../images/js-website-home-temp2.jpg');
   background-color: #FF6B6B;
 }
 
 .item2 {
-  background-image: url('img/js-website-home-temp3.jpg');
+  background-image: url('../images/js-website-home-temp3.jpg');
   background-color: #FFD93D;
 }
 
 .item3 {
-  background-image: url('img/js-website-home-temp4.jpg');
+  background-image: url('../images/js-website-home-temp4.jpg');
   background-color: #6BCB77;
 }
 
 .item4 {
-  background-image: url('img/js-website-home-temp5.jpg');
+  background-image: url('../images/js-website-home-temp5.jpg');
   background-color: #4D96FF;
 }
 
 .item5 {
-  background-image: url('img/js-website-home-temp6.jpg');
+  background-image: url('../images/js-website-home-temp6.jpg');
   background-color: #D67BFF;
 }
 
 .item6 {
-  background-image: url('img/js-website-home-temp7.jpg');
+  background-image: url('../images/js-website-home-temp7.jpg');
   background-color: #FF8C42;
 }
 
@@ -575,32 +577,31 @@ padding: 10px 0 10px 10px;
 
 /* THE ANIMATED PROJECT LOGO CAROUSEL */
 
-@keyframes moving-logo {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .logos {
+  width: 100%;
   overflow: hidden;
-  padding: 10px 0;
-  white-space: nowrap;
   background-color: #383233;
-  position: relative;
+  padding: 10px 0;
 }
 
-.logos:hover .logos-slide {
+.logos-container {
+  display: flex;
+  animation: ticker 30s linear infinite;
+}
+
+.logos:hover .logos-container {
   animation-play-state: paused;
 }
 
-.logos-slide {
-  animation: moving-logo 30s linear infinite;
-  display: inline-flex;
-  width: auto; /* Ensure the container is wide enough for all images */
+.logos-container img {
+  height: 50px;
+  margin: 0 40px;
+  flex-shrink: 0;
 }
 
 .logos-slide img {
@@ -682,4 +683,164 @@ padding: 10px 0 10px 10px;
 .footer-logos:hover {
   color: #FFB8C8;
   cursor: pointer;
+}
+
+/* Listen Here Section Styles */
+.hear-content {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  gap: 30px;
+}
+
+.listen-here-section {
+  position: relative; /* Establish positioning context */
+  flex-shrink: 0;
+  width: 100px; /* The horizontal space for the container */
+  height: 350px; /* The vertical space for the container */
+}
+
+.listen-here-text {
+  color: #56FFF6;
+  font-size: clamp(12px, 2.5vw, 24px);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+}
+
+/* Absolutely position, center, and rotate the inner block */
+.listen-rotate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 350px; /* This becomes the height after rotation */
+  white-space: nowrap; /* Prevent text wrapping */
+
+  /* Flex properties for internal alignment */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(15px, 2vw, 25px);
+}
+
+.listen-label {
+  color: #56FFF6;
+  font-size: clamp(11px, 1.6vw, 18px);
+  letter-spacing: 0.18em;
+}
+
+.listen-title {
+  color: #56FFF6;
+  font-size: clamp(16px, 4vw, 42px);
+  line-height: 0.9;
+  letter-spacing: 0.06em;
+}
+
+.listen-icons {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 2vw, 18px);
+}
+
+.listen-icon {
+  color: #56FFF6;
+  font-size: clamp(16px, 3vw, 32px);
+  margin-left: 6px;
+  transition: color 0.3s ease;
+}
+
+.listen-icon:hover {
+  color: #FFB8C8;
+}
+
+/* Simplified Hear Content Styles */
+.hear-content-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.hear-content-simple img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hear-content-simple .listen-label {
+  font-size: 1.2em;
+  color: white;
+  margin: 0;
+}
+
+.listen-icons-simple {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.listen-icons-simple a {
+  color: #ff6b9d;
+  font-size: 1.8em;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.listen-icons-simple a:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.listen-section-inline {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.listen-section-inline .listen-label {
+  font-size: 1.2em;
+  color: white;
+  margin: 0;
+}
+
+.listen-section-inline a {
+  color: #ff6b9d;
+  font-size: 1.8em;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.listen-section-inline a:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Two-column hear content layout */
+.hear-content-two-column {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.hear-image-column {
+  width: 60%;
+  flex-shrink: 0;
+}
+
+.hear-image-column img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hear-info-column {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
