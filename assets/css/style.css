@@ -62,22 +62,40 @@ header {
   }
 }
 
+@keyframes fadeToMaroon {
+
+  0%,
+  100% {
+    background-color: #151F4D;
+  }
+
+  50% {
+    background-color: #691D1D;
+  }
+}
+
 .right-row-1 {
   padding: 16px;
   background-color: #151F4D;
+  animation: fadeToMaroon 8s ease-in-out infinite;
 }
 
-/* 
-.right-row-1 {
-  padding: 16px;
-  background: linear-gradient(180deg, black, #691d1d,  black);
-  background-size: 100% 200%;
-  animation: gradientAnimation1 4s linear infinite; /* Adjust the duration as needed
-} */
+@keyframes fadeToBlue {
+
+  0%,
+  100% {
+    background-color: #691D1D;
+  }
+
+  50% {
+    background-color: #151F4D;
+  }
+}
 
 .right-row-2 {
   padding: 16px;
   background-color: #691D1D;
+  animation: fadeToBlue 8s ease-in-out infinite;
 }
 
 @media (max-width: 900px) {
@@ -87,6 +105,25 @@ header {
 
   .right-column {
     flex-direction: row;
+  }
+}
+
+/* For very wide screens */
+@media (min-width: 1600px) {
+  .left-column {
+    min-height: 600px; /* Increase header height */
+  }
+
+  .right-column {
+    gap: 16px; /* Increase space between rows */
+  }
+
+  .right-row-1,
+  .right-row-2 {
+    flex: 1; /* Allow rows to grow and fill space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
   }
 }
 
@@ -107,7 +144,7 @@ input {
   width: 100%;
 }
 
-button {
+button, .read-more-btn {
   padding: 10px 20px;
   margin: 5px;
   background-color: #ffb8c8;
@@ -116,12 +153,19 @@ button {
   border: none;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
+  font-weight: bold;
+  letter-spacing: -0.025em;
   /* Adding transition effect */
 }
 
-button:hover {
+button:hover, .read-more-btn:hover {
   box-shadow: 0 0 12px rgba(255, 184, 200, 0.8);
   /* Adding outer glow on hover */
+}
+
+.read-more-btn {
+  margin-top: 10px;
+  align-self: flex-start; /* Prevent button from stretching */
 }
 
 .project-link:hover {
@@ -443,7 +487,8 @@ button:hover {
 .video-feature {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
 }
 
 .video-feature iframe {
@@ -460,7 +505,8 @@ button:hover {
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 10px;
-  margin-top: 10px; /* Keeps spacing between video and title */
+  margin-top: 10px;
+  /* Keeps spacing between video and title */
   text-align: left;
 }
 
@@ -489,37 +535,48 @@ button:hover {
 .video-demos {
   width: 100%;
   max-width: 100vw;
-padding: 10px 0 10px 10px;
+  padding: 10px 0 10px 10px;
 }
 
 .video-container {
   display: flex;
-  flex-direction: row; /* Keep videos side by side */
+  flex-direction: row;
+  /* Keep videos side by side */
   border: none;
-  gap: 10px; /* Space between videos */
+  gap: 10px;
+  /* Space between videos */
   padding: 10px 0 0 0;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  overflow-y: hidden; /* Prevents vertical scrolling */
-  white-space: nowrap; /* Ensures videos don't wrap */
-  scroll-snap-type: x mandatory; /* Smooth snap-scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+  overflow-x: auto;
+  /* Enables horizontal scrolling */
+  overflow-y: hidden;
+  /* Prevents vertical scrolling */
+  white-space: nowrap;
+  /* Ensures videos don't wrap */
+  scroll-snap-type: x mandatory;
+  /* Smooth snap-scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on touch devices */
 }
 
 .video-container::-webkit-scrollbar {
-  display: none; /* Hides the scrollbar for a cleaner look */
+  display: none;
+  /* Hides the scrollbar for a cleaner look */
 }
 
 
 .video-item {
-  flex: 0 0 35vw; /* Each video is ~35% of viewport width */
-  height: auto; /* Allows height to adjust automatically */
+  flex: 0 0 35vw;
+  /* Each video is ~35% of viewport width */
+  height: auto;
+  /* Allows height to adjust automatically */
   position: relative;
 }
 
 .video-item::before {
   content: "";
   display: block;
-  padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 56.25%) */
+  padding-top: 56.25%;
+  /* 16:9 aspect ratio (9/16 = 56.25%) */
 }
 
 .video-item iframe {
@@ -529,6 +586,12 @@ padding: 10px 0 10px 10px;
   top: 0;
   left: 0;
   border: none;
+}
+
+@media (max-width: 768px) {
+  .video-item {
+    flex: 0 0 65vw;
+  }
 }
 
 
@@ -542,6 +605,12 @@ padding: 10px 0 10px 10px;
 /* Different colors for visualization */
 .footer-item1 {
   background-color: #1C2A66;
+}
+
+@media (max-width: 768px) {
+  .footer-grid-item {
+    font-size: 18px; /* Or another value that you prefer */
+  }
 }
 
 .footer-item2 {
@@ -578,8 +647,13 @@ padding: 10px 0 10px 10px;
 /* THE ANIMATED PROJECT LOGO CAROUSEL */
 
 @keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .logos {
@@ -651,7 +725,8 @@ padding: 10px 0 10px 10px;
 
 .footer-item1 p {
   font-size: clamp(12px, 2.5vw, 22px);
-  line-height: 1.4; /* Improves readability */
+  line-height: 1.4;
+  /* Improves readability */
 }
 
 .footer-item2 {
@@ -661,8 +736,10 @@ padding: 10px 0 10px 10px;
 
 .footer-item2 p {
   font-size: clamp(16px, 3vw, 28px);
-  line-height: 1.4; /* Improves readability */
+  line-height: 1.4;
+  /* Improves readability */
 }
+
 .footer-item3 {
   grid-column: span 1;
   /* Resets it to full width */
@@ -670,7 +747,8 @@ padding: 10px 0 10px 10px;
 
 .footer-item3 p {
   font-size: clamp(12px, 2.5vw, 22px);
-  line-height: 1.4; /* Improves readability */
+  line-height: 1.4;
+  /* Improves readability */
 }
 
 .footer-logos {
@@ -688,15 +766,19 @@ padding: 10px 0 10px 10px;
 /* Listen Here Section Styles */
 .hear-content {
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center;
+  /* Center items vertically */
   gap: 30px;
 }
 
 .listen-here-section {
-  position: relative; /* Establish positioning context */
+  position: relative;
+  /* Establish positioning context */
   flex-shrink: 0;
-  width: 100px; /* The horizontal space for the container */
-  height: 350px; /* The vertical space for the container */
+  width: 100px;
+  /* The horizontal space for the container */
+  height: 350px;
+  /* The vertical space for the container */
 }
 
 .listen-here-text {
@@ -713,8 +795,10 @@ padding: 10px 0 10px 10px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-90deg);
-  width: 350px; /* This becomes the height after rotation */
-  white-space: nowrap; /* Prevent text wrapping */
+  width: 350px;
+  /* This becomes the height after rotation */
+  white-space: nowrap;
+  /* Prevent text wrapping */
 
   /* Flex properties for internal alignment */
   display: flex;
