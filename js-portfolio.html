@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph Salazar - Portfolio</title>
+    <title>Joseph Salazar - Press</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
@@ -202,8 +202,20 @@
         @media (max-width: 768px) {
             h1 { font-size: 3rem; }
             h2 { font-size: 2rem; }
-            .grid-2x2, .grid-4col {
+            .grid-2x2 {
                 grid-template-columns: 1fr; /* Stack on mobile */
+            }
+            .grid-4col {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .grid-4col .event-item {
+                flex: 1 1 100%;
+                min-width: 0;
+            }
+            .social-links {
+                flex-direction: column;
+                gap: 1rem;
             }
             .container { padding: 2rem 1.5rem; }
         }
@@ -342,7 +354,7 @@
                 </div>
                 <!-- KID A LIVE -->
                 <div class="event-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">KID A<br>LIVE</div>
+                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">KID A LIVE</div>
                     <a href="https://do512.com/events/2025/10/25/paranoid-androids-kid-a-25th-anniversary-in-the-control-room-tickets" target="_blank">
                         <img src="251025-empire-kidalive-v3.jpg" alt="Paranoid Androids KID A LIVE at Empire" style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
                     </a>
@@ -384,7 +396,7 @@
                 </div>
                 <!-- Quantum Leap Party -->
                 <div class="event-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">Quantum Leap<br>Party</div>
+                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">Quantum Leap Party</div>
                     <a href="https://do512.com/events/2024/2/29/quantum-leap-party-with-night-drive-holy-wire-and-dream-2-dream-tickets" target="_blank">
                         <img src="d2d-240229-theoven.jpg" alt="Quantum Leap Party with Night Drive" style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
                     </a>
