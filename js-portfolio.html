@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joseph Salazar - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Montserrat:wght@300;400&display=swap"
+        rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -36,7 +39,7 @@
             margin-bottom: 4rem;
             color: #f0f0e6;
             text-transform: uppercase;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         h2 {
@@ -48,7 +51,7 @@
             margin-bottom: 2rem;
             color: #dcdcd0;
             text-transform: uppercase;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding-bottom: 1rem;
             display: inline-block;
         }
@@ -90,26 +93,33 @@
 
         .grid-4col .event-item {
             flex: 0 1 calc(25% - 1.5rem);
-            min-width: 200px; /* Ensure they don't get too small */
+            min-width: 200px;
+            /* Ensure they don't get too small */
         }
 
         /* Items */
-        .music-item, .video-item, .event-item {
-            background: rgba(255,255,255,0.03);
+        .music-item,
+        .video-item,
+        .event-item {
+            background: rgba(255, 255, 255, 0.03);
             padding: 1.5rem;
             border-radius: 8px;
             transition: transform 0.3s ease, background 0.3s ease;
         }
 
-        .music-item:hover, .video-item:hover, .event-item:hover {
+        .music-item:hover,
+        .video-item:hover,
+        .event-item:hover {
             transform: translateY(-5px);
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
         }
 
-        .placeholder-image, .placeholder-video {
+        .placeholder-image,
+        .placeholder-video {
             background-color: #2a2a2a;
             width: 100%;
-            aspect-ratio: 1/1; /* Square */
+            aspect-ratio: 1/1;
+            /* Square */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -121,13 +131,15 @@
         }
 
         .placeholder-video {
-            aspect-ratio: 16/9; /* Video ratio */
+            aspect-ratio: 16/9;
+            /* Video ratio */
         }
 
         /* Links */
         a {
             text-decoration: none;
-            color: #dcdcd0; /* Off-white */
+            color: #dcdcd0;
+            /* Off-white */
             font-size: 1.2rem;
             font-weight: 300;
             letter-spacing: 0.05em;
@@ -140,7 +152,7 @@
         a:hover {
             color: #ffffff;
             transform: translateY(-2px);
-            text-shadow: 0 0 15px rgba(255,255,255,0.3);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         }
 
         a::after {
@@ -199,44 +211,84 @@
         }
 
         /* Staggered animation delays for press items */
-        .press-list li:nth-child(1) { animation-delay: 0.2s; }
-        .press-list li:nth-child(2) { animation-delay: 0.4s; }
-        .press-list li:nth-child(3) { animation-delay: 0.6s; }
-        .press-list li:nth-child(4) { animation-delay: 0.8s; }
-        .press-list li:nth-child(5) { animation-delay: 1.0s; }
+        .press-list li:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .press-list li:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .press-list li:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .press-list li:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .press-list li:nth-child(5) {
+            animation-delay: 1.0s;
+        }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Mobile responsiveness */
         @media (max-width: 768px) {
-            html { font-size: 80%; }
-            h1 { font-size: 3rem; }
-            h2 { font-size: 2rem; }
+            html {
+                font-size: 80%;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
             .grid-2x2 {
-                grid-template-columns: 1fr; /* Stack on mobile */
+                grid-template-columns: 1fr;
+                /* Stack on mobile */
             }
+
             .grid-3col {
-                grid-template-columns: 1fr; /* Stack on mobile */
+                grid-template-columns: 1fr;
+                /* Stack on mobile */
             }
+
             .grid-4col {
                 flex-direction: column;
                 align-items: stretch;
             }
+
             .grid-4col .event-item {
                 flex: 1 1 100%;
                 min-width: 0;
             }
+
             .social-links {
                 flex-direction: column;
                 gap: 1rem;
             }
-            .container { padding: 2rem 1.5rem; }
+
+            .container {
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Joseph Salazar</h1>
@@ -245,70 +297,23 @@
         <section id="about">
             <h2>ABOUT</h2>
             <p>
-                I am a musician who writes most of my music with synthesizers and a composer for video games and short films. I am planning to use a lot of reverb and delay on all future music. Thank you for visiting this page. ∞
+                I am a musician who writes most of my music with synthesizers and a composer for video games and short
+                films. I am planning to use a lot of reverb and delay on all future music. Thank you for visiting this
+                page. ∞
             </p>
             <p style="margin-top: 1rem;">
-                Also please check out some of my other projects: <strong><a href="https://open.spotify.com/artist/6yXgyBcAFS0YSgCY3NvfH3?si=GJUVbokMQg2NZ0WYEA1XvQ" target="_blank">Eternal Time & Space</a></strong>, <strong><a href="https://www.youtube.com/@technicolorheartsss" target="_blank">Technicolor Hearts</a></strong>, <strong><a href="https://open.spotify.com/artist/1fsjy4nJhFpHeqg8SPHW3g?si=g7E_LH8ORvea-2DsTvlwJg" target="_blank">Dream 2 Dream</a></strong>, <strong><a href="https://open.spotify.com/artist/2NtkfRETLmL6ZRIgU0e7FF?si=RqyfBfwZQDewwaEwn6ZLoA" target="_blank">The Cosmic Hour</a></strong> and <strong><a href="https://deathisnotajoyride.bandcamp.com/music" target="_blank">Death Is Not a Joyride</a></strong>.
+                Also please check out some of my other projects: <strong><a
+                        href="https://open.spotify.com/artist/6yXgyBcAFS0YSgCY3NvfH3?si=GJUVbokMQg2NZ0WYEA1XvQ"
+                        target="_blank">Eternal Time & Space</a></strong>, <strong><a
+                        href="https://www.youtube.com/@technicolorheartsss" target="_blank">Technicolor
+                        Hearts</a></strong>, <strong><a
+                        href="https://open.spotify.com/artist/1fsjy4nJhFpHeqg8SPHW3g?si=g7E_LH8ORvea-2DsTvlwJg"
+                        target="_blank">Dream 2 Dream</a></strong>, <strong><a
+                        href="https://open.spotify.com/artist/2NtkfRETLmL6ZRIgU0e7FF?si=RqyfBfwZQDewwaEwn6ZLoA"
+                        target="_blank">The Cosmic Hour</a></strong> and <strong><a
+                        href="https://deathisnotajoyride.bandcamp.com/music" target="_blank">Death Is Not a
+                        Joyride</a></strong>.
             </p>
-        </section>
-
-        <!-- ORIGINAL MUSIC -->
-        <section id="original-music">
-            <h2>RECENT RELEASES</h2>
-            <div class="grid-2x2">
-                <!-- Higher Order -->
-                <div class="music-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">Higher Order</div>
-                    <a href="https://josephsalazar.com/higher-order/" target="_blank">
-                        <img src="https://josephsalazar.com/wp-content/uploads/2025/12/js-higherorder-artwork-1440x1440-1-1200x1200.jpg" alt="Higher Order" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
-                    </a>
-                    <div class="links">
-                        <a href="https://www.youtube.com/watch?v=zFIFoFnkwxQ" target="_blank">YouTube</a> | 
-                        <a href="https://open.spotify.com/track/56lfYudd5owRJfw3Fes3nr?si=b7e8c6d335b54086" target="_blank">Spotify</a> | 
-                        <a href="https://namejoseph.bandcamp.com/track/higher-order" target="_blank">Bandcamp</a> | 
-                        <a href="https://music.apple.com/us/album/higher-order-single/1861555794" target="_blank">Apple Music</a>
-                    </div>
-                </div>
-                <!-- Everything Is Information -->
-                <div class="music-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">Everything Is Information</div>
-                    <a href="https://josephsalazar.com/everything-is-information/" target="_blank">
-                        <img src="https://f4.bcbits.com/img/a0490395578_10.jpg" alt="Everything Is Information" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
-                    </a>
-                    <div class="links">
-                        <a href="https://www.youtube.com/watch?v=aqA6w27UYw8" target="_blank">YouTube</a> | 
-                        <a href="https://open.spotify.com/track/5lKI2yJ8nBcTy7YZ8njYY2?si=efd716407df14fc2" target="_blank">Spotify</a> | 
-                        <a href="https://namejoseph.bandcamp.com/track/everything-is-information" target="_blank">Bandcamp</a> | 
-                        <a href="https://music.apple.com/us/album/everything-is-information-single/1798257498" target="_blank">Apple Music</a>
-                    </div>
-                </div>
-                <!-- From the Heavens -->
-                <div class="music-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">From the Heavens<br><span style="font-size: 1.2rem; font-weight: 400;">with Damascan Daydreams</span></div>
-                    <a href="https://josephsalazar.com/from-the-heavens" target="_blank">
-                        <img src="https://f4.bcbits.com/img/a1549370042_10.jpg" alt="From the Heavens" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
-                    </a>
-                    <div class="links">
-                        <a href="https://www.youtube.com/watch?v=rzJYs1ln6mU" target="_blank">YouTube</a> | 
-                        <a href="https://open.spotify.com/track/09N3U6VA7DupB7OZvassUq?si=72baf35d61c54fcf" target="_blank">Spotify</a> | 
-                        <a href="https://namejoseph.bandcamp.com/track/from-the-heavens" target="_blank">Bandcamp</a> | 
-                        <a href="https://music.apple.com/us/album/from-the-heavens-single/1837954808" target="_blank">Apple Music</a>
-                    </div>
-                </div>
-                <!-- By This River -->
-                <div class="music-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">By This River<br><span style="font-size: 1.2rem; font-weight: 400;">(Brian Eno Cover)</span></div>
-                    <a href="https://josephsalazar.com/by-this-river" target="_blank">
-                        <img src="https://f4.bcbits.com/img/a3434795756_10.jpg" alt="By This River" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
-                    </a>
-                    <div class="links">
-                        <a href="https://www.youtube.com/watch?v=niQ_k_rpruU" target="_blank">YouTube</a> | 
-                        <a href="https://open.spotify.com/track/5xuAzZut7uUyABE07upf9b?si=0aca744370424567" target="_blank">Spotify</a> | 
-                        <a href="https://namejoseph.bandcamp.com/track/by-this-river" target="_blank">Bandcamp</a> | 
-                        <a href="https://music.apple.com/us/album/by-this-river-single/1642456244" target="_blank">Apple Music</a>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- SCORING -->
@@ -317,29 +322,44 @@
             <div class="grid-2x2">
                 <!-- Halo Infinite -->
                 <div class="video-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">Halo Infinite</div>
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
+                        Halo Infinite</div>
                     <a href="https://www.youtube.com/watch?v=yEEy4kidPFg" target="_blank">
-                        <img src="https://josephsalazar.com/wp-content/uploads/2021/11/halo-infinite-square-1200x1200.jpg" alt="Halo Infinite" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; display: block;">
+                        <img src="https://josephsalazar.com/wp-content/uploads/2021/11/halo-infinite-square-1200x1200.jpg"
+                            alt="Halo Infinite"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; display: block;">
                     </a>
                     <div class="links" style="margin-top: 1rem; flex-direction: column; align-items: center;">
-                        <a href="https://www.youtube.com/watch?v=yEEy4kidPFg" target="_blank">Watch Trailer on YouTube</a>
-                        <div style="margin-top: 0.75rem; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.05em;">STREAM FULL ALBUM</div>
+                        <a href="https://www.youtube.com/watch?v=yEEy4kidPFg" target="_blank">Watch Trailer on
+                            YouTube</a>
+                        <div style="margin-top: 0.75rem; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.05em;">
+                            STREAM FULL ALBUM</div>
                         <div class="links" style="margin-top: 0.5rem;">
-                            <a href="https://open.spotify.com/album/5nDHWO82TbGBbqbsPqKqec?si=W6dmso0cRni64agZMTMyHw" target="_blank">Spotify</a>
-                            <a href="https://music.apple.com/us/album/halo-infinite-multiplayer-a-new-generation-original/1682505552" target="_blank">Apple Music</a>
-                            <a href="https://www.youtube.com/playlist?list=OLAK5uy_m1CEiuqgIxbzzVXLihwySLx7Z6FFlF2ZU" target="_blank">YouTube</a>
+                            <a href="https://open.spotify.com/album/5nDHWO82TbGBbqbsPqKqec?si=W6dmso0cRni64agZMTMyHw"
+                                target="_blank">Spotify</a>
+                            <a href="https://music.apple.com/us/album/halo-infinite-multiplayer-a-new-generation-original/1682505552"
+                                target="_blank">Apple Music</a>
+                            <a href="https://www.youtube.com/playlist?list=OLAK5uy_m1CEiuqgIxbzzVXLihwySLx7Z6FFlF2ZU"
+                                target="_blank">YouTube</a>
                         </div>
                     </div>
                 </div>
                 <!-- Where the Heart Leads -->
                 <div class="video-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">Where the Heart Leads</div>
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
+                        Where the Heart Leads</div>
                     <a href="https://www.youtube.com/watch?v=lJZNbqXDIgs" target="_blank">
-                        <img src="https://josephsalazar.com/wp-content/uploads/2021/07/217827325_350701223283490_7993269378516334098_n.jpg" alt="Where the Heart Leads" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; display: block;">
+                        <img src="https://josephsalazar.com/wp-content/uploads/2021/07/217827325_350701223283490_7993269378516334098_n.jpg"
+                            alt="Where the Heart Leads"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; display: block;">
                     </a>
                     <div class="links" style="margin-top: 1rem; flex-direction: column; align-items: center;">
-                        <a href="https://www.youtube.com/watch?v=lJZNbqXDIgs" target="_blank">Watch Trailer on YouTube</a>
-                        <div style="margin-top: 0.75rem; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.05em;">STREAM FULL ALBUM</div>
+                        <a href="https://www.youtube.com/watch?v=lJZNbqXDIgs" target="_blank">Watch Trailer on
+                            YouTube</a>
+                        <div style="margin-top: 0.75rem; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.05em;">
+                            STREAM FULL ALBUM</div>
                         <div class="links" style="margin-top: 0.5rem;">
                             <a href="https://wthl.bandcamp.com/album/where-the-heart-leads" target="_blank">Bandcamp</a>
                         </div>
@@ -347,18 +367,109 @@
                 </div>
                 <!-- Echo's Answer -->
                 <div class="video-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">Echo's Answer</div>
-                    <iframe src="https://player.vimeo.com/video/583045607" style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 4px;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
+                        Echo's Answer</div>
+                    <iframe src="https://player.vimeo.com/video/583045607"
+                        style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 4px;"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     <div class="links" style="margin-top: 1rem;">
                         <a href="https://vimeo.com/583045607" target="_blank">WATCH ON VIMEO</a>
                     </div>
                 </div>
                 <!-- Felted -->
                 <div class="video-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">Felted</div>
-                    <iframe src="https://player.vimeo.com/video/318060161" style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 4px;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
+                        Felted</div>
+                    <iframe src="https://player.vimeo.com/video/318060161"
+                        style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 4px;"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     <div class="links" style="margin-top: 1rem;">
                         <a href="https://vimeo.com/318060161" target="_blank">WATCH ON VIMEO</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ORIGINAL MUSIC -->
+        <section id="original-music">
+            <h2>RECENT RELEASES</h2>
+            <div class="grid-2x2">
+                <!-- Higher Order -->
+                <div class="music-item">
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
+                        Higher Order</div>
+                    <a href="https://josephsalazar.com/higher-order/" target="_blank">
+                        <img src="https://josephsalazar.com/wp-content/uploads/2025/12/js-higherorder-artwork-1440x1440-1-1200x1200.jpg"
+                            alt="Higher Order"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
+                    </a>
+                    <div class="links">
+                        <a href="https://www.youtube.com/watch?v=zFIFoFnkwxQ" target="_blank">YouTube</a> |
+                        <a href="https://open.spotify.com/track/56lfYudd5owRJfw3Fes3nr?si=b7e8c6d335b54086"
+                            target="_blank">Spotify</a> |
+                        <a href="https://namejoseph.bandcamp.com/track/higher-order" target="_blank">Bandcamp</a> |
+                        <a href="https://music.apple.com/us/album/higher-order-single/1861555794" target="_blank">Apple
+                            Music</a>
+                    </div>
+                </div>
+                <!-- Everything Is Information -->
+                <div class="music-item">
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
+                        Everything Is Information</div>
+                    <a href="https://josephsalazar.com/everything-is-information/" target="_blank">
+                        <img src="https://f4.bcbits.com/img/a0490395578_10.jpg" alt="Everything Is Information"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
+                    </a>
+                    <div class="links">
+                        <a href="https://www.youtube.com/watch?v=aqA6w27UYw8" target="_blank">YouTube</a> |
+                        <a href="https://open.spotify.com/track/5lKI2yJ8nBcTy7YZ8njYY2?si=efd716407df14fc2"
+                            target="_blank">Spotify</a> |
+                        <a href="https://namejoseph.bandcamp.com/track/everything-is-information"
+                            target="_blank">Bandcamp</a> |
+                        <a href="https://music.apple.com/us/album/everything-is-information-single/1798257498"
+                            target="_blank">Apple Music</a>
+                    </div>
+                </div>
+                <!-- From the Heavens -->
+                <div class="music-item">
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
+                        From the Heavens<br><span style="font-size: 1.2rem; font-weight: 400;">with Damascan
+                            Daydreams</span></div>
+                    <a href="https://josephsalazar.com/from-the-heavens" target="_blank">
+                        <img src="https://f4.bcbits.com/img/a1549370042_10.jpg" alt="From the Heavens"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
+                    </a>
+                    <div class="links">
+                        <a href="https://www.youtube.com/watch?v=rzJYs1ln6mU" target="_blank">YouTube</a> |
+                        <a href="https://open.spotify.com/track/09N3U6VA7DupB7OZvassUq?si=72baf35d61c54fcf"
+                            target="_blank">Spotify</a> |
+                        <a href="https://namejoseph.bandcamp.com/track/from-the-heavens" target="_blank">Bandcamp</a> |
+                        <a href="https://music.apple.com/us/album/from-the-heavens-single/1837954808"
+                            target="_blank">Apple Music</a>
+                    </div>
+                </div>
+                <!-- By This River -->
+                <div class="music-item">
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
+                        By This River<br><span style="font-size: 1.2rem; font-weight: 400;">(Brian Eno Cover)</span>
+                    </div>
+                    <a href="https://josephsalazar.com/by-this-river" target="_blank">
+                        <img src="https://f4.bcbits.com/img/a3434795756_10.jpg" alt="By This River"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
+                    </a>
+                    <div class="links">
+                        <a href="https://www.youtube.com/watch?v=niQ_k_rpruU" target="_blank">YouTube</a> |
+                        <a href="https://open.spotify.com/track/5xuAzZut7uUyABE07upf9b?si=0aca744370424567"
+                            target="_blank">Spotify</a> |
+                        <a href="https://namejoseph.bandcamp.com/track/by-this-river" target="_blank">Bandcamp</a> |
+                        <a href="https://music.apple.com/us/album/by-this-river-single/1642456244" target="_blank">Apple
+                            Music</a>
                     </div>
                 </div>
             </div>
@@ -367,21 +478,31 @@
         <!-- LIVE PERFORMANCES -->
         <section id="live-performances">
             <h2>LIVE PERFORMANCES</h2>
-            
+
             <!-- Featured Performances 2x1 Grid -->
             <div class="grid-2x2" style="margin-bottom: 3rem;">
                 <!-- Reality IV -->
                 <div class="video-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">Reality IV<br><span style="font-size: 1.2rem; font-weight: 400;">LIVE AT DADALAB 8.17.24</span></div>
-                    <iframe src="https://www.youtube.com/embed/n5lEd3G9oCY" style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 4px;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
+                        Reality IV<br><span style="font-size: 1.2rem; font-weight: 400;">LIVE AT DADALAB 8.17.24</span>
+                    </div>
+                    <iframe src="https://www.youtube.com/embed/n5lEd3G9oCY"
+                        style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 4px;"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     <div class="links" style="margin-top: 1rem;">
                         <a href="https://www.youtube.com/watch?v=n5lEd3G9oCY" target="_blank">WATCH ON YOUTUBE</a>
                     </div>
                 </div>
                 <!-- Input.pathNavigation.Output -->
                 <div class="video-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">Input.pathNavigation.Output<br><span style="font-size: 1.2rem; font-weight: 400;">LIVE AT DADALAB 8.17.24</span></div>
-                    <iframe src="https://www.youtube.com/embed/ydxw4fNcvSg" style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 4px;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
+                        Input.pathNavigation.Output<br><span style="font-size: 1.2rem; font-weight: 400;">LIVE AT
+                            DADALAB 8.17.24</span></div>
+                    <iframe src="https://www.youtube.com/embed/ydxw4fNcvSg"
+                        style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 4px;"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     <div class="links" style="margin-top: 1rem;">
                         <a href="https://www.youtube.com/watch?v=ydxw4fNcvSg" target="_blank">WATCH ON YOUTUBE</a>
                     </div>
@@ -392,65 +513,101 @@
                 <!-- Past Events Grid -->
                 <!-- Dreams of Light -->
                 <div class="event-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">Dreams of Light<br> Art Opening</div>
-                    <a href="https://www.eventbrite.com/e/dreams-of-light-opening-party-tickets-1972158839177" target="_blank">
-                        <img src="https://josephsalazar.com/wp-content/uploads/2025/12/Dreams-of-Light_final-graphic.jpg" alt="Dreams of Light at ArtUs Co" style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">
+                        Dreams of Light<br> Art Opening</div>
+                    <a href="https://www.eventbrite.com/e/dreams-of-light-opening-party-tickets-1972158839177"
+                        target="_blank">
+                        <img src="https://josephsalazar.com/wp-content/uploads/2025/12/Dreams-of-Light_final-graphic.jpg"
+                            alt="Dreams of Light at ArtUs Co"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
                     </a>
                 </div>
                 <!-- KID A LIVE -->
                 <div class="event-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">KID A<br>LIVE</div>
-                    <a href="https://do512.com/events/2025/10/25/paranoid-androids-kid-a-25th-anniversary-in-the-control-room-tickets" target="_blank">
-                        <img src="251025-empire-kidalive-v3.jpg" alt="Paranoid Androids KID A LIVE at Empire" style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">
+                        KID A<br>LIVE</div>
+                    <a href="https://do512.com/events/2025/10/25/paranoid-androids-kid-a-25th-anniversary-in-the-control-room-tickets"
+                        target="_blank">
+                        <img src="251025-empire-kidalive-v3.jpg" alt="Paranoid Androids KID A LIVE at Empire"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
                     </a>
                 </div>
                 <!-- From the Heavens Single Release -->
                 <div class="event-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">"From the Heavens" Single Release</div>
-                    <a href="https://do512.com/events/2025/9/20/from-the-heavens-a-night-of-ethereal-dream-pop-cosmic-electronica-and-alternative-rock-tickets" target="_blank">
-                        <img src="250920-13thfloor-fromtheheavens-full-v1.jpg" alt="From the Heavens Single Release" style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">
+                        "From the Heavens" Single Release</div>
+                    <a href="https://do512.com/events/2025/9/20/from-the-heavens-a-night-of-ethereal-dream-pop-cosmic-electronica-and-alternative-rock-tickets"
+                        target="_blank">
+                        <img src="250920-13thfloor-fromtheheavens-full-v1.jpg" alt="From the Heavens Single Release"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
                     </a>
                 </div>
                 <!-- Quadrant v7.0 -->
                 <div class="event-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">Quadrant<br>v7.0</div>
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">
+                        Quadrant<br>v7.0</div>
                     <a href="https://www.instagram.com/p/DJH0IAUJ48O/?img_index=1" target="_blank">
-                        <img src="https://josephsalazar.com/wp-content/uploads/2025/03/Quadrant_v7-Square.jpeg" alt="Quadrant v7.0" style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
+                        <img src="https://josephsalazar.com/wp-content/uploads/2025/03/Quadrant_v7-Square.jpeg"
+                            alt="Quadrant v7.0"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
                     </a>
                 </div>
                 <!-- Dreamwave Odyssey -->
                 <div class="event-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">Dreamwave<br>Odyssey</div>
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">
+                        Dreamwave<br>Odyssey</div>
                     <a href="https://dreamwaveodyssey.com/" target="_blank">
-                        <img src="dreamwaveodyssey-flyer-1080x1350-final.jpg" alt="Dreamwave Odyssey" style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
+                        <img src="dreamwaveodyssey-flyer-1080x1350-final.jpg" alt="Dreamwave Odyssey"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
                     </a>
                 </div>
                 <!-- Austin Studio Tour DJ Set -->
                 <div class="event-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">Austin Studio Tour<br> DJ Set</div>
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">
+                        Austin Studio Tour<br> DJ Set</div>
                     <a href="https://www.instagram.com/p/DBumGcbO9qw/?img_index=1" target="_blank">
-                        <img src="austinstudiotour.jpg" alt="Austin Studio Tour DJ Set" style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
+                        <img src="austinstudiotour.jpg" alt="Austin Studio Tour DJ Set"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
                     </a>
                 </div>
                 <!-- $3 Shows Benefit at dadaLab -->
                 <div class="event-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">$3 Shows Benefit<br> at dadaLab</div>
-                    <a href="https://www.eventbrite.com/e/3-shows-benefiting-swan-songs-ft-psychedelic-breakfast-a-tribute-to-pink-floyd-more-tickets-939685052287" target="_blank">
-                        <img src="https://josephsalazar.com/wp-content/uploads/2024/07/3ds-dadalab-240817-1080x1350-1.jpeg" alt="$3 Shows Benefit at dadaLabe" style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">
+                        $3 Shows Benefit<br> at dadaLab</div>
+                    <a href="https://www.eventbrite.com/e/3-shows-benefiting-swan-songs-ft-psychedelic-breakfast-a-tribute-to-pink-floyd-more-tickets-939685052287"
+                        target="_blank">
+                        <img src="https://josephsalazar.com/wp-content/uploads/2024/07/3ds-dadalab-240817-1080x1350-1.jpeg"
+                            alt="$3 Shows Benefit at dadaLabe"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
                     </a>
                 </div>
                 <!-- Quantum Leap Party -->
                 <div class="event-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">Quantum Leap<br>Party</div>
-                    <a href="https://do512.com/events/2024/2/29/quantum-leap-party-with-night-drive-holy-wire-and-dream-2-dream-tickets" target="_blank">
-                        <img src="d2d-240229-theoven.jpg" alt="Quantum Leap Party with Night Drive" style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">
+                        Quantum Leap<br>Party</div>
+                    <a href="https://do512.com/events/2024/2/29/quantum-leap-party-with-night-drive-holy-wire-and-dream-2-dream-tickets"
+                        target="_blank">
+                        <img src="d2d-240229-theoven.jpg" alt="Quantum Leap Party with Night Drive"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
                     </a>
                 </div>
                 <!-- DSOTM -->
                 <div class="event-item">
-                    <div style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">The Dark Side of the Moon 50th Anniversary</div>
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.4rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem;">
+                        The Dark Side of the Moon 50th Anniversary</div>
                     <a href="https://www.instagram.com/p/CrRS0gkpwLK/" target="_blank">
-                        <img src="usandthem-dsotm50th-230421-v4.jpg" alt="The Dark Side of the Moon 50th Anniversary Show" style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
+                        <img src="usandthem-dsotm50th-230421-v4.jpg"
+                            alt="The Dark Side of the Moon 50th Anniversary Show"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: contain; display: block;">
                     </a>
                 </div>
             </div>
@@ -466,7 +623,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://queencitysounds.org/2025/04/28/joseph-salazar-builds-a-cosmic-sense-of-wonder-on-hazy-ambient-synth-track-everything-is-information/" target="_blank">
+                    <a href="https://queencitysounds.org/2025/04/28/joseph-salazar-builds-a-cosmic-sense-of-wonder-on-hazy-ambient-synth-track-everything-is-information/"
+                        target="_blank">
                         Queen City Sounds and Art - Song Review 2025
                     </a>
                 </li>
@@ -476,7 +634,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.expansionradial.mx/joseph-salazar-everything-is-information-experimental-electronic/" target="_blank">
+                    <a href="https://www.expansionradial.mx/joseph-salazar-everything-is-information-experimental-electronic/"
+                        target="_blank">
                         Expansión Radial - Song Review 2025
                     </a>
                 </li>
@@ -486,7 +645,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://kutx.org/song-of-the-day/joseph-salazar-the-main-sequence-premiere/" target="_blank">
+                    <a href="https://kutx.org/song-of-the-day/joseph-salazar-the-main-sequence-premiere/"
+                        target="_blank">
                         KUTX - Song of the Day "The Main Sequence" 2023
                     </a>
                 </li>
@@ -509,7 +669,8 @@
         <section id="contact">
             <h2>CONTACT</h2>
             <p>
-                <a href="mailto:thefutureofouterspace@gmail.com" class="contact-link">thefutureofouterspace@gmail.com</a>
+                <a href="mailto:thefutureofouterspace@gmail.com"
+                    class="contact-link">thefutureofouterspace@gmail.com</a>
             </p>
             <p>
                 <a href="http://josephsalazar.com" target="_blank" class="contact-link">josephsalazar.com</a>
@@ -517,4 +678,5 @@
         </section>
     </div>
 </body>
+
 </html>
