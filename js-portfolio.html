@@ -97,6 +97,33 @@
             .header-social {
                 justify-content: center;
             }
+
+            #social-media .social-links {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 2rem;
+                max-width: 400px;
+                margin: 0 auto;
+                justify-items: center;
+            }
+
+            #social-media .social-links a {
+                font-size: 2.4rem;
+            }
+
+            #social-media .social-links a:nth-child(1),
+            #social-media .social-links a:nth-child(2),
+            #social-media .social-links a:nth-child(3) {
+                grid-column: span 2;
+            }
+
+            #social-media .social-links a:nth-child(4) {
+                grid-column: 2 / span 2;
+            }
+
+            #social-media .social-links a:nth-child(5) {
+                grid-column: 4 / span 2;
+            }
         }
 
         .container {
