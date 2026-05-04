@@ -89,6 +89,144 @@
             background-color: rgba(255, 255, 255, 0.3);
         }
 
+        /* Newsletter / Mailchimp */
+        #mc_embed_signup {
+            background: transparent;
+            margin-top: 3.5rem;
+            font-family: 'Montserrat', sans-serif;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #mc_embed_signup * {
+            text-align: center;
+        }
+
+        #mc_embed_signup_scroll {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 420px;
+        }
+
+        #mc_embed_signup h2 {
+            font-family: 'Antonio', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            color: #dcdcd0;
+            text-transform: uppercase;
+            margin: 0 0 1.25rem 0;
+        }
+
+        #mc_embed_signup .mc-field-group {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+
+        #mc_embed_signup .mc-field-group label {
+            font-family: 'Antonio', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            color: #dcdcd0;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        #mc_embed_signup input.email {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            padding: 0.75rem 1rem;
+            color: #f0f0e6;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            width: 100%;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        #mc_embed_signup input.email:focus {
+            border-color: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        #mc_embed_signup input.email::placeholder {
+            color: rgba(240, 240, 230, 0.4);
+        }
+
+        #mc-embedded-subscribe {
+            font-family: 'Antonio', sans-serif !important;
+            font-size: 1.1rem !important;
+            font-weight: 300 !important;
+            letter-spacing: 0.2em !important;
+            color: #f0f0e6 !important;
+            text-transform: uppercase !important;
+            background: transparent !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 4px !important;
+            padding: 0.75rem 1.5rem !important;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            height: auto !important;
+            line-height: 1 !important;
+        }
+
+        #mc-embedded-subscribe:hover {
+            color: #ffffff !important;
+            border-color: #ffffff !important;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            background: transparent !important;
+        }
+
+        #mc_embed_signup div.response {
+            width: 100% !important;
+            margin: 1rem 0 0 0 !important;
+            padding: 0 !important;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        #mce-success-response {
+            color: #f0f0e6 !important;
+        }
+
+        #mce-error-response {
+            color: #ff8a8a !important;
+        }
+
+        #mc_embed_signup .foot,
+        #mc_embed_signup .optionalParent {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            text-align: center;
+            width: 100% !important;
+            max-width: 100% !important;
+            flex-direction: column;
+        }
+
+        #mc-embedded-subscribe {
+            display: inline-block;
+            float: none !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        #mc_embed_signup .helper_text {
+            background: transparent !important;
+            color: rgba(240, 240, 230, 0.6);
+            font-size: 0.8rem;
+        }
+
         @media (max-width: 600px) {
             .name {
                 font-size: 2.75rem;
@@ -134,6 +272,40 @@
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
+        <!-- Begin Mailchimp Signup Form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+        <div id="mc_embed_signup">
+            <form
+                action="https://josephsalazar.us4.list-manage.com/subscribe/post?u=bb9bd9af4b19463331457da0e&amp;id=96852febc8&amp;f_id=00235ee8f0"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                    <h2>Sign Up for Updates</h2>
+                    <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email Address</label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                        <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                    </div>
+                    <div id="mce-responses" class="clear foot">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                            name="b_bb9bd9af4b19463331457da0e_96852febc8" tabindex="-1" value=""></div>
+                    <div class="optionalParent">
+                        <div class="clear foot">
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                                class="button">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type='text/javascript'
+            src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+        <script type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'MMERGE3'; ftypes[3] = 'text'; fnames[4] = 'MMERGE4'; ftypes[4] = 'text'; fnames[5] = 'MMERGE5'; ftypes[5] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+        <!--End mc_embed_signup-->
     </div>
 </body>
 
