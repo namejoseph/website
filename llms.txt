@@ -1,0 +1,25 @@
+# Joseph Salazar Website
+
+## Project Overview
+Personal portfolio website for Joseph Salazar — a musician, composer, and artist. The site showcases music releases, scoring work, events, and social links.
+
+## Structure
+- `index.html` — Landing page with coming soon message, social links, embedded YouTube videos, and Mailchimp signup
+- `js-portfolio.html` — Full portfolio with sections: About, Scoring, Recent Releases, Events, Press, Other Work, Social Media, Contact
+- `assets/` — Static assets
+  - `images/` — All images (event flyers, album art, project thumbnails)
+  - `css/` — Stylesheets
+  - `js/` — JavaScript files
+
+## Key Details
+- Uses Font Awesome 6.5.1 for social icons
+- Google Fonts: Antonio (headings) and Montserrat (body)
+- Dark theme with off-white text (#f0f0e6, #dcdcd0)
+- Responsive design with mobile breakpoints at 600px
+- Open Graph and Twitter card meta tags on both pages using `assets/images/js-website-home-slider-minimoog.jpg`
+
+## Image References
+All images are served from `assets/images/` — no external image hosts (except Bandcamp CDN for album art and YouTube embeds).
+
+## Social Links
+YouTube, Instagram, Facebook, X, LinkedIn, Spotify, Bandcamp, Email
