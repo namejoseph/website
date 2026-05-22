@@ -236,6 +236,39 @@
             font-size: 0.8rem;
         }
 
+        .video-section {
+            margin-top: 3rem;
+            width: 75vw;
+            max-width: 1400px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .video-section h2 {
+            font-family: 'Antonio', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            color: #dcdcd0;
+            text-transform: uppercase;
+            margin: 0 0 1.25rem 0;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            width: 100%;
+        }
+
+        .video-grid iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+            border-radius: 4px;
+            display: block;
+        }
+
         @media (max-width: 600px) {
             .name {
                 font-size: 2.75rem;
@@ -251,6 +284,16 @@
 
             .social a {
                 font-size: 1.5rem;
+            }
+
+            .video-section {
+                width: 100%;
+                margin-left: 0;
+                transform: none;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -282,10 +325,17 @@
             <a href="https://namejoseph.bandcamp.com/" target="_blank" aria-label="Bandcamp">
                 <i class="fab fa-bandcamp"></i>
             </a>
-            <div class="separator"></div>
             <a href="mailto:thefutureofouterspace@gmail.com" aria-label="Email">
                 <i class="fas fa-envelope"></i>
             </a>
+        </div>
+        <div class="video-section">
+            <h2>Music Videos</h2>
+            <div class="video-grid">
+                <iframe src="https://www.youtube.com/embed/Fy0p11VM9K0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/vh0mlrGyLbE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/4NBKoLYiJEg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
         <!-- Begin Mailchimp Signup Form -->
         <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
