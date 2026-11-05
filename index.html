@@ -36,21 +36,30 @@
             background: #000000;
             color: #e0e0e0;
             font-family: 'Montserrat', sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
         }
 
-        .container {
+        .layout {
+            display: grid;
+            grid-template-columns: minmax(320px, 2fr) 3fr;
+            min-height: 100vh;
+        }
+
+        .intro {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            width: 100%;
-            max-width: 800px;
+            padding: 3rem 2rem;
         }
 
         .name {
             font-family: 'Antonio', sans-serif;
-            font-size: 4.5rem;
+            font-size: clamp(2.75rem, 5vw, 4.5rem);
             font-weight: 400;
             letter-spacing: 0.2em;
             color: #f0f0e6;
@@ -62,7 +71,7 @@
 
         .tagline {
             font-family: 'Antonio', sans-serif;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 300;
             letter-spacing: 0.15em;
             color: #dcdcd0;
@@ -236,46 +245,136 @@
             font-size: 0.8rem;
         }
 
-        .video-section {
-            margin-top: 3rem;
-            width: 75vw;
-            max-width: 1400px;
-            margin-left: 50%;
-            transform: translateX(-50%);
+        .feed {
+            padding: 3rem 2rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .video-section h2 {
+        .feed-inner {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .feed h2 {
             font-family: 'Antonio', sans-serif;
             font-size: 1.5rem;
             font-weight: 300;
             letter-spacing: 0.15em;
             color: #dcdcd0;
             text-transform: uppercase;
-            margin: 0 0 1.25rem 0;
+            text-align: center;
+            margin: 0 0 2rem 0;
         }
 
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.25rem;
-            width: 100%;
+        .feed-item {
+            background: #141414;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
-        .video-grid iframe {
+        .feed-item .feed-subtitle {
+            display: block;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            color: #a8a8a0;
+            margin-top: 0.25rem;
+        }
+
+        .feed-item iframe,
+        .feed-item .placeholder.video {
+            margin-top: 1.25rem;
+        }
+
+        .placeholder {
             width: 100%;
+            aspect-ratio: 1/1;
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Antonio', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(240, 240, 230, 0.35);
+        }
+
+        .placeholder.video {
             aspect-ratio: 16/9;
+        }
+
+        .feed-item h3 {
+            font-family: 'Antonio', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 300;
+            letter-spacing: 0.12em;
+            color: #f0f0e6;
+            text-transform: uppercase;
+            margin: 0 0 0.75rem 0;
+        }
+
+        .feed-item iframe,
+        .feed-item img {
+            width: 100%;
             border: none;
             border-radius: 4px;
             display: block;
         }
 
-        @media (max-width: 600px) {
-            .name {
-                font-size: 2.75rem;
+        .feed-item iframe {
+            aspect-ratio: 16/9;
+        }
+
+        .feed-links {
+            margin-top: 0.9rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1.25rem;
+        }
+
+        .feed-links a {
+            font-family: 'Antonio', sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            color: #dcdcd0;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .feed-links a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
             }
 
+            .intro {
+                position: static;
+                height: auto;
+                overflow: visible;
+                padding: 4rem 1.5rem 2rem;
+            }
+
+            .feed {
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
             .tagline {
-                font-size: 1.1rem;
+                font-size: 1.4rem;
             }
 
             .social {
@@ -285,23 +384,14 @@
             .social a {
                 font-size: 1.5rem;
             }
-
-            .video-section {
-                width: 100%;
-                margin-left: 0;
-                transform: none;
-            }
-
-            .video-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="name">Joseph Salazar</h1>
+    <div class="layout">
+    <section class="intro">
+        <h1 class="name">Joseph<br>Salazar</h1>
         <p class="tagline">New Website Coming Soon</p>
         <div class="social">
             <a href="https://youtube.com/@namejoseph" target="_blank" aria-label="YouTube">
@@ -328,14 +418,6 @@
             <a href="mailto:thefutureofouterspace@gmail.com" aria-label="Email">
                 <i class="fas fa-envelope"></i>
             </a>
-        </div>
-        <div class="video-section">
-            <h2>Music Videos</h2>
-            <div class="video-grid">
-                <iframe src="https://www.youtube.com/embed/Fy0p11VM9K0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/vh0mlrGyLbE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/4NBKoLYiJEg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
         </div>
         <!-- Begin Mailchimp Signup Form -->
         <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
@@ -371,6 +453,83 @@
             src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
         <script type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'MMERGE3'; ftypes[3] = 'text'; fnames[4] = 'MMERGE4'; ftypes[4] = 'text'; fnames[5] = 'MMERGE5'; ftypes[5] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
         <!--End mc_embed_signup-->
+    </section>
+
+    <main class="feed">
+        <div class="feed-inner">
+            <h2>Recent Projects</h2>
+
+            <article class="feed-item">
+                <h3>Evenin' Shift</h3>
+                <a href="https://store.steampowered.com/app/4711830/Evenin_Shift/" target="_blank">
+                    <img src="assets/images/eveninshift-cover-1400x1400.webp" alt="Evenin' Shift" loading="lazy">
+                </a>
+                <div class="feed-links">
+                    <a href="https://www.youtube.com/watch?v=uEzL13WZIrA" target="_blank">YouTube</a>
+                    <a href="https://store.steampowered.com/app/4711830/Evenin_Shift/" target="_blank">Steam</a>
+                    <a href="https://tom-paul.itch.io/evenin-shift" target="_blank">itch.io</a>
+                </div>
+                <iframe src="https://www.youtube.com/embed/uEzL13WZIrA" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </article>
+
+            <article class="feed-item">
+                <h3>The Internet Portals of Meaninglessness</h3>
+                <a href="https://theinternetportalsofmeaninglessness.com" target="_blank">
+                    <img src="assets/images/js-ipom-artwork.webp" alt="The Internet Portals of Meaninglessness" loading="lazy">
+                </a>
+                <div class="feed-links">
+                    <a href="https://theinternetportalsofmeaninglessness.com" target="_blank">Website</a>
+                    <a href="https://www.youtube.com/watch?v=rYrWNC4OJjI" target="_blank">YouTube</a>
+                    <a href="https://open.spotify.com/track/3mGB5dV7lbBSVFyqsSgcvu?si=7fbab04d9a514bf8" target="_blank">Spotify</a>
+                    <a href="https://namejoseph.bandcamp.com/track/the-internet-portals-of-meaninglessness" target="_blank">Bandcamp</a>
+                    <a href="https://music.apple.com/us/album/the-internet-portals-of-meaninglessness-single/6815751137" target="_blank">Apple Music</a>
+                    <a href="https://www.amazon.com/music/player/albums/B0HKX56LHV" target="_blank">Amazon Music</a>
+                </div>
+            </article>
+
+            <article class="feed-item">
+                <h3>A New Mosaic</h3>
+                <a href="https://josephsalazar.com/higher-order/" target="_blank">
+                    <img src="assets/images/js-anewmosaic-cover-1400x1400-1-1200x1200.jpg" alt="A New Mosaic" loading="lazy">
+                </a>
+                <div class="feed-links">
+                    <a href="https://www.youtube.com/watch?v=3JUicHDIUJU" target="_blank">YouTube</a>
+                    <a href="https://open.spotify.com/track/4uVPAq1JhopfpIkdeH73cQ" target="_blank">Spotify</a>
+                    <a href="https://namejoseph.bandcamp.com/track/a-new-mosaic" target="_blank">Bandcamp</a>
+                    <a href="https://music.apple.com/us/album/a-new-mosaic-single/1877417382" target="_blank">Apple Music</a>
+                    <a href="https://www.amazon.com/music/player/albums/B0GNJDXJYF" target="_blank">Amazon Music</a>
+                </div>
+            </article>
+
+            <article class="feed-item">
+                <h3>From the Heavens<span class="feed-subtitle">with Damascan Daydreams</span></h3>
+                <a href="https://josephsalazar.com/from-the-heavens" target="_blank">
+                    <img src="https://f4.bcbits.com/img/a1549370042_10.jpg" alt="From the Heavens" loading="lazy">
+                </a>
+                <div class="feed-links">
+                    <a href="https://www.youtube.com/watch?v=Fy0p11VM9K0" target="_blank">YouTube</a>
+                    <a href="https://open.spotify.com/track/09N3U6VA7DupB7OZvassUq?si=72baf35d61c54fcf" target="_blank">Spotify</a>
+                    <a href="https://namejoseph.bandcamp.com/track/from-the-heavens" target="_blank">Bandcamp</a>
+                    <a href="https://music.apple.com/us/album/from-the-heavens-single/1837954808" target="_blank">Apple Music</a>
+                    <a href="https://www.amazon.com/dp/B0FPXSGKS4/ref=sr_1_1" target="_blank">Amazon Music</a>
+                </div>
+                <iframe src="https://www.youtube.com/embed/Fy0p11VM9K0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </article>
+
+            <article class="feed-item">
+                <h3>By This River<span class="feed-subtitle">(Brian Eno Cover)</span></h3>
+                <a href="https://josephsalazar.com/by-this-river" target="_blank">
+                    <img src="https://f4.bcbits.com/img/a3434795756_10.jpg" alt="By This River" loading="lazy">
+                </a>
+                <div class="feed-links">
+                    <a href="https://www.youtube.com/watch?v=niQ_k_rpruU" target="_blank">YouTube</a>
+                    <a href="https://open.spotify.com/track/5xuAzZut7uUyABE07upf9b?si=0aca744370424567" target="_blank">Spotify</a>
+                    <a href="https://namejoseph.bandcamp.com/track/by-this-river" target="_blank">Bandcamp</a>
+                    <a href="https://music.apple.com/us/album/by-this-river-single/1642456244" target="_blank">Apple Music</a>
+                </div>
+            </article>
+        </div>
+    </main>
     </div>
 </body>
 
