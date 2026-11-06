@@ -295,6 +295,15 @@
             font-size: 0.9rem;
         }
 
+        .links a.icon-link {
+            font-size: 1.35rem;
+            padding: 0 0.2rem;
+        }
+
+        .links a.icon-link::after {
+            display: none;
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
@@ -470,12 +479,9 @@
                         <div style="margin-top: 0.75rem; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.05em;">
                             STREAM FULL ALBUM</div>
                         <div class="links" style="margin-top: 0.5rem;">
-                            <a href="https://open.spotify.com/album/5nDHWO82TbGBbqbsPqKqec?si=W6dmso0cRni64agZMTMyHw"
-                                target="_blank">Spotify</a>
-                            <a href="https://music.apple.com/us/album/halo-infinite-multiplayer-a-new-generation-original/1682505552"
-                                target="_blank">Apple Music</a>
-                            <a href="https://www.youtube.com/playlist?list=OLAK5uy_m1CEiuqgIxbzzVXLihwySLx7Z6FFlF2ZU"
-                                target="_blank">YouTube</a>
+                            <a class="icon-link" href="https://open.spotify.com/album/5nDHWO82TbGBbqbsPqKqec?si=W6dmso0cRni64agZMTMyHw" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                            <a class="icon-link" href="https://music.apple.com/us/album/halo-infinite-multiplayer-a-new-generation-original/1682505552" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+                            <a class="icon-link" href="https://www.youtube.com/playlist?list=OLAK5uy_m1CEiuqgIxbzzVXLihwySLx7Z6FFlF2ZU" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -495,7 +501,7 @@
                         <div style="margin-top: 0.75rem; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.05em;">
                             STREAM FULL ALBUM</div>
                         <div class="links" style="margin-top: 0.5rem;">
-                            <a href="https://wthl.bandcamp.com/album/where-the-heart-leads" target="_blank">Bandcamp</a>
+                            <a class="icon-link" href="https://wthl.bandcamp.com/album/where-the-heart-leads" target="_blank" aria-label="Bandcamp"><i class="fab fa-bandcamp"></i></a>
                         </div>
                     </div>
                 </div>
@@ -508,7 +514,7 @@
                         style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 4px;"
                         allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     <div class="links" style="margin-top: 1rem;">
-                        <a href="https://vimeo.com/583045607" target="_blank">WATCH ON VIMEO</a>
+                        <a href="https://vimeo.com/583045607" target="_blank">Watch on Vimeo</a>
                     </div>
                 </div>
                 <!-- Felted -->
@@ -520,7 +526,7 @@
                         style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 4px;"
                         allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     <div class="links" style="margin-top: 1rem;">
-                        <a href="https://vimeo.com/318060161" target="_blank">WATCH ON VIMEO</a>
+                        <a href="https://vimeo.com/318060161" target="_blank">Watch on Vimeo</a>
                     </div>
                 </div>
             </div>
@@ -530,23 +536,59 @@
         <section id="original-music">
             <h2>RECENT RELEASES</h2>
             <div class="grid-2x2">
+                <!-- The Internet Portals of Meaninglessness -->
+                <div class="music-item">
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
+                        The Internet Portals of Meaninglessness</div>
+                    <a href="https://josephsalazar.com/internet-portals/" target="_blank">
+                        <img src="assets/images/js-ipom-artwork.webp"
+                            alt="The Internet Portals of Meaninglessness"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
+                    </a>
+                    <div class="links">
+                        <a class="icon-link" href="https://theinternetportalsofmeaninglessness.com" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
+                        <a class="icon-link" href="https://www.youtube.com/watch?v=rYrWNC4OJjI" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a class="icon-link" href="https://open.spotify.com/track/3mGB5dV7lbBSVFyqsSgcvu?si=7fbab04d9a514bf8" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                        <a class="icon-link" href="https://namejoseph.bandcamp.com/track/the-internet-portals-of-meaninglessness" target="_blank" aria-label="Bandcamp"><i class="fab fa-bandcamp"></i></a>
+                        <a class="icon-link" href="https://music.apple.com/us/album/the-internet-portals-of-meaninglessness-single/6815751137" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+                        <a class="icon-link" href="https://www.amazon.com/music/player/albums/B0HKX56LHV" target="_blank" aria-label="Amazon Music"><i class="fab fa-amazon"></i></a>
+                    </div>
+                </div>
+                <!-- A New Mosaic -->
+                <div class="music-item">
+                    <div
+                        style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
+                        A New<br>Mosaic</div>
+                    <a href="https://josephsalazar.com/a-new-mosaic/" target="_blank">
+                        <img src="assets/images/js-anewmosaic-cover-1400x1400-1-1200x1200.jpg"
+                            alt="A New Mosaic"
+                            style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
+                    </a>
+                    <div class="links">
+                        <a class="icon-link" href="https://www.youtube.com/watch?v=3JUicHDIUJU" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a class="icon-link" href="https://open.spotify.com/track/4uVPAq1JhopfpIkdeH73cQ" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                        <a class="icon-link" href="https://namejoseph.bandcamp.com/track/a-new-mosaic" target="_blank" aria-label="Bandcamp"><i class="fab fa-bandcamp"></i></a>
+                        <a class="icon-link" href="https://music.apple.com/us/album/a-new-mosaic-single/1877417382" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+                        <a class="icon-link" href="https://www.amazon.com/music/player/albums/B0GNJDXJYF" target="_blank" aria-label="Amazon Music"><i class="fab fa-amazon"></i></a>
+                    </div>
+                </div>
                 <!-- Higher Order -->
                 <div class="music-item">
                     <div
                         style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
-                        A New Mosaic</div>
+                        Higher Order</div>
                     <a href="https://josephsalazar.com/higher-order/" target="_blank">
-                        <img src="assets/images/js-anewmosaic-cover-1400x1400-1-1200x1200.jpg"
+                        <img src="assets/images/js-higherorder-artwork-1440x1440.webp"
                             alt="Higher Order"
                             style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
                     </a>
                     <div class="links">
-                        <a href="https://www.youtube.com/watch?v=3JUicHDIUJU" target="_blank">YouTube</a> |
-                        <a href="https://open.spotify.com/track/4uVPAq1JhopfpIkdeH73cQ"
-                            target="_blank">Spotify</a> |
-                        <a href="https://www.youtube.com/watch?v=3JUicHDIUJU" target="_blank">Bandcamp</a> |
-                        <a href="https://music.apple.com/us/album/a-new-mosaic-single/1877417382" target="_blank">Apple
-                            Music</a>
+                        <a class="icon-link" href="https://www.youtube.com/watch?v=zFIFoFnkwxQ" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a class="icon-link" href="https://open.spotify.com/track/56lfYudd5owRJfw3Fes3nr?si=b7e8c6d335b54086" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                        <a class="icon-link" href="https://namejoseph.bandcamp.com/track/higher-order" target="_blank" aria-label="Bandcamp"><i class="fab fa-bandcamp"></i></a>
+                        <a class="icon-link" href="https://music.apple.com/us/album/higher-order-single/1861555794" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+                        <a class="icon-link" href="https://www.amazon.com/music/player/albums/B0G76T6MD4" target="_blank" aria-label="Amazon Music"><i class="fab fa-amazon"></i></a>
                     </div>
                 </div>
                 <!-- Everything Is Information -->
@@ -555,17 +597,15 @@
                         style="font-family: 'Antonio', sans-serif; font-size: 1.8rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">
                         Everything Is Information</div>
                     <a href="https://josephsalazar.com/everything-is-information/" target="_blank">
-                        <img src="https://f4.bcbits.com/img/a0490395578_10.jpg" alt="Everything Is Information"
+                        <img src="assets/images/js-eii-artwork-final-1080x1080.webp" alt="Everything Is Information"
                             style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
                     </a>
                     <div class="links">
-                        <a href="https://www.youtube.com/watch?v=aqA6w27UYw8" target="_blank">YouTube</a> |
-                        <a href="https://open.spotify.com/track/5lKI2yJ8nBcTy7YZ8njYY2?si=efd716407df14fc2"
-                            target="_blank">Spotify</a> |
-                        <a href="https://namejoseph.bandcamp.com/track/everything-is-information"
-                            target="_blank">Bandcamp</a> |
-                        <a href="https://music.apple.com/us/album/everything-is-information-single/1798257498"
-                            target="_blank">Apple Music</a>
+                        <a class="icon-link" href="https://www.youtube.com/watch?v=aqA6w27UYw8" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a class="icon-link" href="https://open.spotify.com/track/5lKI2yJ8nBcTy7YZ8njYY2?si=efd716407df14fc2" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                        <a class="icon-link" href="https://namejoseph.bandcamp.com/track/everything-is-information" target="_blank" aria-label="Bandcamp"><i class="fab fa-bandcamp"></i></a>
+                        <a class="icon-link" href="https://music.apple.com/us/album/everything-is-information-single/1798257498" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+                        <a class="icon-link" href="https://www.amazon.com/dp/B0DY8H7B36" target="_blank" aria-label="Amazon Music"><i class="fab fa-amazon"></i></a>
                     </div>
                 </div>
                 <!-- From the Heavens -->
@@ -579,12 +619,10 @@
                             style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
                     </a>
                     <div class="links">
-                        <a href="https://www.youtube.com/watch?v=Fy0p11VM9K0" target="_blank">YouTube</a> |
-                        <a href="https://open.spotify.com/track/09N3U6VA7DupB7OZvassUq?si=72baf35d61c54fcf"
-                            target="_blank">Spotify</a> |
-                        <a href="https://namejoseph.bandcamp.com/track/from-the-heavens" target="_blank">Bandcamp</a> |
-                        <a href="https://music.apple.com/us/album/from-the-heavens-single/1837954808"
-                            target="_blank">Apple Music</a>
+                        <a class="icon-link" href="https://www.youtube.com/watch?v=Fy0p11VM9K0" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a class="icon-link" href="https://open.spotify.com/track/09N3U6VA7DupB7OZvassUq?si=72baf35d61c54fcf" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                        <a class="icon-link" href="https://namejoseph.bandcamp.com/track/from-the-heavens" target="_blank" aria-label="Bandcamp"><i class="fab fa-bandcamp"></i></a>
+                        <a class="icon-link" href="https://music.apple.com/us/album/from-the-heavens-single/1837954808" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
                     </div>
                 </div>
                 <!-- By This River -->
@@ -598,12 +636,10 @@
                             style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; display: block;">
                     </a>
                     <div class="links">
-                        <a href="https://www.youtube.com/watch?v=niQ_k_rpruU" target="_blank">YouTube</a> |
-                        <a href="https://open.spotify.com/track/5xuAzZut7uUyABE07upf9b?si=0aca744370424567"
-                            target="_blank">Spotify</a> |
-                        <a href="https://namejoseph.bandcamp.com/track/by-this-river" target="_blank">Bandcamp</a> |
-                        <a href="https://music.apple.com/us/album/by-this-river-single/1642456244" target="_blank">Apple
-                            Music</a>
+                        <a class="icon-link" href="https://www.youtube.com/watch?v=niQ_k_rpruU" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a class="icon-link" href="https://open.spotify.com/track/5xuAzZut7uUyABE07upf9b?si=0aca744370424567" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                        <a class="icon-link" href="https://namejoseph.bandcamp.com/track/by-this-river" target="_blank" aria-label="Bandcamp"><i class="fab fa-bandcamp"></i></a>
+                        <a class="icon-link" href="https://music.apple.com/us/album/by-this-river-single/1642456244" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
                     </div>
                 </div>
             </div>
@@ -625,7 +661,7 @@
                         style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 4px;"
                         allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     <div class="links" style="margin-top: 1rem;">
-                        <a href="https://www.youtube.com/watch?v=n5lEd3G9oCY" target="_blank">WATCH ON YOUTUBE</a>
+                        <a href="https://www.youtube.com/watch?v=n5lEd3G9oCY" target="_blank">Watch on YouTube</a>
                     </div>
                 </div>
                 <!-- Input.pathNavigation.Output -->
@@ -638,7 +674,7 @@
                         style="width: 100%; aspect-ratio: 16/9; border: none; border-radius: 4px;"
                         allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     <div class="links" style="margin-top: 1rem;">
-                        <a href="https://www.youtube.com/watch?v=ydxw4fNcvSg" target="_blank">WATCH ON YOUTUBE</a>
+                        <a href="https://www.youtube.com/watch?v=ydxw4fNcvSg" target="_blank">Watch on YouTube</a>
                     </div>
                 </div>
             </div>
@@ -751,6 +787,16 @@
         <section id="press">
             <h2>PRESS</h2>
             <ul class="press-list">
+                <li>
+                    <a href="https://grauu.com/joseph-salazar-the-internet-portals-of-meaninglessness" target="_blank">
+                        Grauu - Song Review 2026
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.parkettchannel.it/joseph-salazar-the-internet-portals-of-meaninglessness/" target="_blank">
+                        Parkett - Song Review 2026
+                    </a>
+                </li>
                 <li>
                     <a href="https://post-punk.com/how-do-i-know-damascan-daydreams-joseph-salazar-collaborate-in-video-for-divine-dreampop-single-from-the-heavens/" target="_blank">
                         Post-Punk - Music Video Feature 2026
